@@ -18,9 +18,15 @@ def route_dbinit():
 
 #-----------------------------------------------------------------
 
-@app.route('/', methods=['GET'])
-def home():
-  return "Voir le sujet sur e-learning pour plus d'informations."
+@app.route('/prets', methods=['GET'])
+def prets_fetchall():
+  db = Db()
+  result = db.select("SELECT * FROM prets")
+  db.close()
+  
+  resp = make_response(json.dumps(result))
+  resp.mimetype = 'application/json'
+  return resp
 
 #-----------------------------------------------------------------
 
