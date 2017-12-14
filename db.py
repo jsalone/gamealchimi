@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-import psycopg2, urlparse, re, os
-
+import psycopg2, re, os
+from urllib.parse import urlparse
 class Db:
   """Connexion à la base de données postgres de l'environnement Heroku."""
 

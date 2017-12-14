@@ -8,8 +8,8 @@ import json
 import random
 import os
 import psycopg2
-import urlparse
-
+#import urlparse
+from urllib.parse import urlparse
 app = Flask(__name__)
 app.debug = True
 CORS(app)
