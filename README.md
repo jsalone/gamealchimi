@@ -8,3 +8,4 @@ TODO list :
   - [ ] Finir la rédaction du sujet et des instructions
 
 En attendant, voici les instructions de Heroku ; celles-ci doivent être adaptées à notre cours :  [https://devcenter.heroku.com/articles/getting-started-with-python](https://devcenter.heroku.com/articles/getting-started-with-python)
+# gamealchimi
