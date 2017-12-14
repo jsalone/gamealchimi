@@ -6,7 +6,7 @@ class Db:
 
   def __init__(self):
     """Initiate a connection to the default postgres database."""
-    urlparse.uses_netloc.append("postgres")
+    urlparse.uses_netloc.append("mysql")
     url = urlparse.urlparse(os.environ["DATABASE_URL"])
 
     self.conn = psycopg2.connect(
