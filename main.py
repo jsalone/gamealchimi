@@ -1,11 +1,18 @@
 # -*- coding: utf-8 -*-
-from flask import Flask, request, make_response
-import json, os, psycopg2, urlparse
-from db import Db # voyez db.py
+from flask import Flask, request
 from flask import render_template
+from db import Db # voyez db.py
+from flask_cors import CORS, cross_origin
+
+import json
+import random
+import os
+import psycopg2
+import urlparse
 
 app = Flask(__name__)
 app.debug = True
+CORS(app)
 
 error=json.dumps({'success':False}), 403, {'ContentType':'application/json'}
 def db_init():
